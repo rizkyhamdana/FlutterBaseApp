@@ -1,0 +1,54 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+// **************************************************************************
+// InjectableConfigGenerator
+// **************************************************************************
+
+// ignore_for_file: unnecessary_lambdas
+// ignore_for_file: lines_longer_than_80_chars
+// coverage:ignore-file
+
+// ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'package:flutter_base_app/config/helper/api_helper.dart' as _i3;
+import 'package:flutter_base_app/config/services/call_api_service.dart' as _i6;
+import 'package:flutter_base_app/data/repository/app_repository_impl.dart'
+    as _i5;
+import 'package:flutter_base_app/domain/entities/global.dart' as _i7;
+import 'package:flutter_base_app/domain/repository/app_repository.dart' as _i4;
+import 'package:flutter_base_app/presentation/pages/movie/detail/movie_detail_cubit.dart'
+    as _i9;
+import 'package:flutter_base_app/presentation/pages/movie/movie_cubit.dart'
+    as _i8;
+import 'package:flutter_base_app/presentation/pages/tv_show/detail/tv_show_detail_cubit.dart'
+    as _i11;
+import 'package:flutter_base_app/presentation/pages/tv_show/tv_show_cubit.dart'
+    as _i10;
+import 'package:flutter_base_app/presentation/pages/watchlist/watchlist_cubit.dart'
+    as _i12;
+import 'package:get_it/get_it.dart' as _i1;
+import 'package:injectable/injectable.dart' as _i2;
+
+// ignore_for_file: unnecessary_lambdas
+// ignore_for_file: lines_longer_than_80_chars
+// initializes the registration of main-scope dependencies inside of GetIt
+_i1.GetIt init(
+  _i1.GetIt getIt, {
+  String? environment,
+  _i2.EnvironmentFilter? environmentFilter,
+}) {
+  final gh = _i2.GetItHelper(
+    getIt,
+    environment,
+    environmentFilter,
+  );
+  gh.lazySingleton<_i3.ApiHelper>(() => _i3.ApiHelper());
+  gh.lazySingleton<_i4.AppRepository>(() => _i5.AppRepositoryImpl());
+  gh.lazySingleton<_i6.CallApiService>(() => _i6.CallApiService());
+  gh.lazySingleton<_i7.Global>(() => _i7.Global());
+  gh.lazySingleton<_i8.MovieCubit>(() => _i8.MovieCubit());
+  gh.lazySingleton<_i9.MovieDetailCubit>(() => _i9.MovieDetailCubit());
+  gh.lazySingleton<_i10.TvShowCubit>(() => _i10.TvShowCubit());
+  gh.lazySingleton<_i11.TvShowDetailCubit>(() => _i11.TvShowDetailCubit());
+  gh.lazySingleton<_i12.WatchListCubit>(() => _i12.WatchListCubit());
+  return getIt;
+}
